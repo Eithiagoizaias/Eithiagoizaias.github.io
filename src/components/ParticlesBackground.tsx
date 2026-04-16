@@ -1,17 +1,21 @@
-import { useCallback } from "react";
-import Particles from "@tsparticles/react";
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import type { Engine } from "@tsparticles/engine";
 
 const ParticlesBackground = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadSlim(engine);
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
   }, []);
+
+  if (!init) return null;
 
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
       options={{
         fullScreen: { enable: true, zIndex: 0 },
         particles: {
@@ -22,9 +26,7 @@ const ParticlesBackground = () => {
             value: { min: 0, max: 1 },
             animation: { enable: true, speed: 1, startValue: "random", destroy: "none" },
           },
-          size: {
-            value: { min: 0.5, max: 3 },
-          },
+          size: { value: { min: 0.5, max: 3 } },
           links: { enable: false },
           move: {
             enable: true,
