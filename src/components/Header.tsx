@@ -10,7 +10,7 @@ const Header = () => {
           <a href="https://github.com/Eithiagoizaias" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Github
           </a>
-          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://drive.google.com/file/d/1IgRFzFndUCCWt95IrwR5P4skxchf18bs/view?usp=drivesdk" target="_blank" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Resume
           </a>
         </nav>
