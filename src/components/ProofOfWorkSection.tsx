@@ -56,7 +56,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => (
 const ProofOfWorkSection = () => {
   return (
     <section>
-      <h2 className="section-title mb-5">Proof-of-Work</h2>
+      <h2 className="section-title mb-5">Proof Of Work</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
