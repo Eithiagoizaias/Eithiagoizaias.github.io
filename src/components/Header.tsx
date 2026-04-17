@@ -6,13 +6,14 @@ const Header = () => {
           <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
           <span className="text-sm font-medium text-green-400">Available for work</span>
         </div>
-        <nav className="flex items-center gap-6">
+        <nav className="flex items-center gap-4 sm:gap-6">
           <a href="https://github.com/Eithiagoizaias" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Github
           </a>
           <a href="https://drive.google.com/file/d/1IgRFzFndUCCWt95IrwR5P4skxchf18bs/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Resume
           </a>
+          <div className="gtranslate_wrapper flex items-center" />
         </nav>
       </div>
     </header>
